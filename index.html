@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal — News analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/" aria-label="Signal home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span>Signal<span class="brand-divider">/</span>News analysis</span>
+    </a>
+    <div class="hero">
+      <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> TEXT PATTERN ANALYSIS</p>
+      <h1>A second look at<br><span>what you’re reading.</span></h1>
+      <p class="hero-copy">Explore how an article’s wording compares with patterns in the training data. A useful signal, not a fact check.</p>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <form id="form" class="sheet" novalidate>
+      <div class="card-heading">
+        <div>
+          <p class="step-label">01 <span>/</span> ARTICLE</p>
+          <h2>Bring a story to review</h2>
+        </div>
+        <span class="input-tag">TEXT INPUT</span>
+      </div>
+      <div id="stamp" class="stamp" aria-hidden="true"></div>
+
+      <label class="sr" for="title">Headline</label>
+      <input id="title" class="headline" type="text" placeholder="Add the article headline" autocomplete="off" aria-label="Article headline">
+
+      <label class="sr" for="body">Article text</label>
+      <textarea id="body" class="body" rows="12" placeholder="Paste the full article text here…" aria-label="Article text"></textarea>
+
+      <div class="actions">
+        <button type="submit" id="go" class="btn primary"><span>Analyze article</span><span aria-hidden="true">→</span></button>
+        <button type="button" id="example" class="btn ghost">Load an example</button>
+        <span id="count" class="count" aria-live="polite">0 words</span>
+      </div>
+    </form>
+
+    <aside id="verdict" class="verdict is-empty" aria-live="polite" aria-atomic="true"></aside>
+  </main>
+
+  <footer class="foot">
+    <span class="foot-mark" aria-hidden="true">i</span>
+    <p><strong>Use this as a signal, not a verdict.</strong> The model was trained on the Kaggle Fake and Real News dataset. It compares wording patterns and does not verify claims or sources; its confidence is not evidence that an article is true or false.</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
