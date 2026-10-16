@@ -6,6 +6,16 @@ intended for experimentation and education, not as an automated fact-checker:
 predictions are dataset-dependent and must not be treated as proof that a story
 is true or false.
 
+## Live demo
+
+Try the deployed web app at
+[fake-news-detection-liab.onrender.com](https://fake-news-detection-liab.onrender.com/).
+Enter an article headline and text, then select **Analyze article** to see the
+model's predicted label and estimated class probabilities. The hosted service
+may take a little while to respond when waking from inactivity. As with the
+local app, the result reflects patterns learned from the training dataset; it
+does not verify an article's claims or sources.
+
 ## Main workflow
 
 Use [fake_news_detector.ipynb](./fake_news_detector.ipynb) as the primary

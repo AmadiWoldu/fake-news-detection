@@ -60,6 +60,20 @@ and other dataset-specific signals may inflate them and limit generalization:
 | Stratified holdout (seed 42, 20%) | 0.9919 | 0.9918 | 0.9919 | 0.9919 |
 | Independent test set | Not measured | Not measured | Not measured | Not measured |
 
+## Deployment
+
+The model is available through the deployed web app at
+[https://fake-news-detection-liab.onrender.com/](https://fake-news-detection-liab.onrender.com/).
+The app accepts an article headline and body, sends their combined text to the
+prediction service, and displays the predicted dataset label alongside the
+model's estimated class probabilities. The service may take longer to respond
+after a period of inactivity.
+
+Deployment does not change the evaluation results above or establish
+real-world fact-checking ability. The hosted prediction is still based on the
+same dataset-dependent text classification approach and should be treated as
+an exploratory signal, not evidence that an article is true or false.
+
 ## Challenges and limitations
 
 The major methodological risk is learning dataset collection artifacts rather
